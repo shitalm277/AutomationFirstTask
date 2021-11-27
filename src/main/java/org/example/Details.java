@@ -18,5 +18,9 @@ public class Details {
         //in the comment text box it will type the comments automatically. no need to type.
         driver.findElement(By.id("AddNewComment_CommentText")).sendKeys("This is the first homework of Maven Project.");
         driver.findElement(By.xpath("//div[@class='buttons']/button[1]")).click(); //it will click on the New Comment button
+        String actualText = driver.findElement(By.xpath("//div[@class='result']")).getText();
+        System.out.println(actualText);
+        //close the browser
+        driver.close();
     }
 }

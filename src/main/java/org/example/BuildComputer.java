@@ -14,5 +14,10 @@ public class BuildComputer {
         driver.findElement(By.xpath("//div[@class='header-menu']/ul[1]/li[1]/a")).click();//clicks on the Computer menu
         driver.findElement(By.xpath("//ul[@class='sublist']/li[1]/a")).click();//clicks on Desktops menu
         driver.findElement(By.xpath("//div[@class='item-grid']/div[1]/div[1]/div[2]/h2/a")).click();//clicks on Build your own computer
+        //verify expected result=actual results
+        String actualText = driver.findElement(By.xpath("//div[@class='product-name']/h1")).getText();
+        System.out.println(actualText);
+        //close the browser
+        driver.close();
     }
 }
